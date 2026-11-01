@@ -1,0 +1,1 @@
+enum RefundOpsKind { refund, chargeback }

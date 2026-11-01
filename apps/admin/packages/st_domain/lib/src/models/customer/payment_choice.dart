@@ -1,0 +1,1 @@
+enum PaymentChoice { cod, online }

@@ -1,0 +1,62 @@
+name: Switch Active App
+
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'Select active app to set at repo root (for FlutterLab)'
+        required: true
+        type: choice
+        options:
+          - customer
+          - admin
+          - partner
+
+jobs:
+  switch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Switch Active App to ${{ github.event.inputs.app }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          APP="${{ github.event.inputs.app }}"
+          CURRENT=$(cat ACTIVE_APP 2>/dev/null || echo "none")
+
+          if [ "$APP" = "$CURRENT" ]; then
+            echo "App '$APP' is already active. Nothing to do."
+            exit 0
+          fi
+
+          echo "Switching from '$CURRENT' to '$APP'..."
+
+          # Remove current root Flutter files (keep apps/, .github/, scripts/, ACTIVE_APP)
+          rm -rf lib android ios web test packages pubspec.yaml pubspec.lock analysis_options.yaml .metadata
+
+          # Copy selected app to root
+          cp -r apps/$APP/lib ./lib 2>/dev/null || true
+          cp -r apps/$APP/android ./android 2>/dev/null || true
+          cp -r apps/$APP/ios ./ios 2>/dev/null || true
+          cp -r apps/$APP/web ./web 2>/dev/null || true
+          cp -r apps/$APP/test ./test 2>/dev/null || true
+          cp -r apps/$APP/packages ./packages 2>/dev/null || true
+          cp apps/$APP/pubspec.yaml ./pubspec.yaml 2>/dev/null || true
+          cp apps/$APP/pubspec.lock ./pubspec.lock 2>/dev/null || true
+          cp apps/$APP/analysis_options.yaml ./analysis_options.yaml 2>/dev/null || true
+
+          # Update ACTIVE_APP marker
+          echo "$APP" > ACTIVE_APP
+
+          git add -A
+          git commit -m "switch: active app changed from '$CURRENT' to '$APP'"
+          git push
+
+          echo ""
+          echo "✅ Root now points to: $APP"
+          echo "FlutterLab URL: https://github.com/rabbyjahidulislam5-art/smart-tiffin.git"

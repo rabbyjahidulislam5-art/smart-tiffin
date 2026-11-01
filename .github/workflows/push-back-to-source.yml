@@ -1,0 +1,77 @@
+name: Push Changes Back to Source Repo
+
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'Which app changes to push back to its source repo'
+        required: true
+        type: choice
+        options:
+          - customer
+          - admin
+          - partner
+      pr_title:
+        description: 'Pull Request title'
+        required: true
+        default: 'Changes from Universal Repo'
+
+jobs:
+  push-back:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Universal Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set target repo URL
+        id: target
+        run: |
+          APP="${{ github.event.inputs.app }}"
+          if [ "$APP" = "customer" ]; then
+            echo "repo=rabbyjahidulislam5-art/alu" >> $GITHUB_OUTPUT
+            echo "repo_url=https://github.com/rabbyjahidulislam5-art/alu.git" >> $GITHUB_OUTPUT
+          elif [ "$APP" = "admin" ]; then
+            echo "repo=rabbyjahidulislam5-art/alu-admin" >> $GITHUB_OUTPUT
+            echo "repo_url=https://github.com/rabbyjahidulislam5-art/alu-admin.git" >> $GITHUB_OUTPUT
+          elif [ "$APP" = "partner" ]; then
+            echo "repo=rabbyjahidulislam5-art/alu-partner" >> $GITHUB_OUTPUT
+            echo "repo_url=https://github.com/rabbyjahidulislam5-art/alu-partner.git" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Clone source repo and create PR branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          APP="${{ github.event.inputs.app }}"
+          TARGET_REPO="${{ steps.target.outputs.repo_url }}"
+          BRANCH="from-universal-$(date +%Y%m%d-%H%M)"
+
+          # Clone the source repo
+          git clone https://x-access-token:${{ secrets.SYNC_TOKEN }}@${TARGET_REPO#https://} /tmp/source-repo
+
+          cd /tmp/source-repo
+          git checkout -b "$BRANCH"
+
+          # Sync changes from apps/$APP/ in universal repo to source repo root
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='build/' \
+            --exclude='.dart_tool/' \
+            $GITHUB_WORKSPACE/apps/$APP/ ./
+
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to push back."
+            exit 0
+          fi
+
+          git commit -m "chore: sync changes from smart-tiffin universal repo"
+          git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@${TARGET_REPO#https://} "$BRANCH"
+
+          echo "Branch '$BRANCH' pushed to $TARGET_REPO"
+          echo "⚠️  Please open a PR manually from branch: $BRANCH"
+          echo "PR URL: https://github.com/${{ steps.target.outputs.repo }}/compare/$BRANCH"

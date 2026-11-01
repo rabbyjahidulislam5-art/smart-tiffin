@@ -1,0 +1,11 @@
+name: st_domain
+description: Smart Tiffin pure Dart domain core (access policy, money, text, validation, repositories and mocks).
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dev_dependencies:
+  test: ^1.25.0
+  kiri_check: ^1.4.0

@@ -1,0 +1,26 @@
+name: st_shared_screens
+description: Smart Tiffin screens shared by the apps (sign-in, notifications, chat, support, settings, profile).
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  st_design_system:
+    path: ../st_design_system
+  st_domain:
+    path: ../st_domain
+  st_shell:
+    path: ../st_shell
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  kiri_check: ^1.4.0
+  st_test_kit:
+    path: ../st_test_kit

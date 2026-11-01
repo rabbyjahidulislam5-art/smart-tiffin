@@ -1,0 +1,34 @@
+name: st_partner_app
+description: Smart Tiffin Partner app (supplier and rider workspaces).
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  st_design_system:
+    path: ../packages/st_design_system
+  st_domain:
+    path: ../packages/st_domain
+  st_shared_screens:
+    path: ../packages/st_shared_screens
+  st_shell:
+    path: ../packages/st_shell
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  kiri_check: ^1.4.0
+  st_test_kit:
+    path: ../packages/st_test_kit
+
+# No `assets:` section: the legacy meal images (assets/images/sourced/meals)
+# are not in this workspace (Unavailable_Source); every image has an
+# errorBuilder fallback.
+flutter:
+  uses-material-design: true

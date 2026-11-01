@@ -1,0 +1,31 @@
+name: st_admin_accounting_app
+description: Smart Tiffin Admin and Accounting web app (two separate role workspaces).
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  st_design_system:
+    path: ../packages/st_design_system
+  st_domain:
+    path: ../packages/st_domain
+  st_shared_screens:
+    path: ../packages/st_shared_screens
+  st_shell:
+    path: ../packages/st_shell
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  kiri_check: ^1.4.0
+  st_test_kit:
+    path: ../packages/st_test_kit
+
+flutter:
+  uses-material-design: true

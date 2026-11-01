@@ -1,0 +1,113 @@
+name: Sync From Source Repos
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # Every 6 hours automatically
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'Which app to sync (customer / admin / partner / all)'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - customer
+          - admin
+          - partner
+
+jobs:
+  sync-customer:
+    if: ${{ github.event.inputs.app == 'customer' || github.event.inputs.app == 'all' || github.event_name == 'schedule' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Universal Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Fetch customer app from alu repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Clone source repo
+          git clone https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/rabbyjahidulislam5-art/alu.git /tmp/alu
+          
+          # Sync to apps/customer/ preserving structure
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='build/' \
+            --exclude='.dart_tool/' \
+            /tmp/alu/ apps/customer/
+          
+          # Commit if changes exist
+          git add apps/customer/
+          if git diff --staged --quiet; then
+            echo "No changes in customer app"
+          else
+            git commit -m "sync(customer): update from alu@$(date +%Y-%m-%d)"
+            git push
+          fi
+
+  sync-admin:
+    if: ${{ github.event.inputs.app == 'admin' || github.event.inputs.app == 'all' || github.event_name == 'schedule' }}
+    runs-on: ubuntu-latest
+    needs: sync-customer
+    steps:
+      - name: Checkout Universal Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Fetch admin app from alu-admin repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git clone https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/rabbyjahidulislam5-art/alu-admin.git /tmp/alu-admin
+          
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='build/' \
+            --exclude='.dart_tool/' \
+            /tmp/alu-admin/ apps/admin/
+          
+          git add apps/admin/
+          if git diff --staged --quiet; then
+            echo "No changes in admin app"
+          else
+            git commit -m "sync(admin): update from alu-admin@$(date +%Y-%m-%d)"
+            git push
+          fi
+
+  sync-partner:
+    if: ${{ github.event.inputs.app == 'partner' || github.event.inputs.app == 'all' || github.event_name == 'schedule' }}
+    runs-on: ubuntu-latest
+    needs: sync-admin
+    steps:
+      - name: Checkout Universal Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Fetch partner app from alu-partner repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git clone https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/rabbyjahidulislam5-art/alu-partner.git /tmp/alu-partner
+          
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='build/' \
+            --exclude='.dart_tool/' \
+            /tmp/alu-partner/ apps/partner/
+          
+          git add apps/partner/
+          if git diff --staged --quiet; then
+            echo "No changes in partner app"
+          else
+            git commit -m "sync(partner): update from alu-partner@$(date +%Y-%m-%d)"
+            git push
+          fi

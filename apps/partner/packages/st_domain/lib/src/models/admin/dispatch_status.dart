@@ -1,0 +1,1 @@
+enum DispatchStatus { delayed, reassigned }

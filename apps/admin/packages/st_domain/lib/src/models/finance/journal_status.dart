@@ -1,0 +1,1 @@
+enum JournalStatus { posted, reversed }

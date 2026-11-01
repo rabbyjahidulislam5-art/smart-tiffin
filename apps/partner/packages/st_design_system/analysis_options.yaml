@@ -1,0 +1,5 @@
+# No lint package is included on purpose: the legacy prototype code is ported
+# verbatim, and `flutter analyze` must report only real analyzer diagnostics.
+analyzer:
+  exclude:
+    - build/**

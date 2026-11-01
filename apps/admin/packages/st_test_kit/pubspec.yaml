@@ -1,0 +1,21 @@
+name: st_test_kit
+description: Test helpers for the Smart Tiffin apps (pump, matrix, registry spy, flow runner). Dev dependency only.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  st_design_system:
+    path: ../st_design_system
+  st_domain:
+    path: ../st_domain
+  st_shell:
+    path: ../st_shell

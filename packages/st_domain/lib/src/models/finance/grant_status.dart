@@ -1,0 +1,1 @@
+enum GrantStatus { active, revoked }

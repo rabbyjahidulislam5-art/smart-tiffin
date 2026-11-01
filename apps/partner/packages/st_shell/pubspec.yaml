@@ -1,0 +1,24 @@
+name: st_shell
+description: Smart Tiffin app shell (state, navigation guard, sessions, screen chrome and shared screen patterns).
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  st_design_system:
+    path: ../st_design_system
+  st_domain:
+    path: ../st_domain
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  kiri_check: ^1.4.0

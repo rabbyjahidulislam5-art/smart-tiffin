@@ -1,0 +1,1 @@
+enum ScheduleChangeKind { skip, replace }

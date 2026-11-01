@@ -1,0 +1,6 @@
+# No lint package is included: `flutter analyze` reports analyzer diagnostics only.
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - web/**
