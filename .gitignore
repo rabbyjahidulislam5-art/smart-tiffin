@@ -38,3 +38,4 @@ coverage/
 # Misc
 .fvm/
 .DS_Store
+.env
