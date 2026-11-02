@@ -1,0 +1,1362 @@
+[
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "en",
+    "state": "normal",
+    "path": "docs/design/renders/C-01-en-normal.png",
+    "width": 645,
+    "height": 6117,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  },
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "en",
+    "state": "loading",
+    "path": "docs/design/renders/C-01-en-loading.png",
+    "width": 645,
+    "height": 3063,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  },
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "en",
+    "state": "empty",
+    "path": "docs/design/renders/C-01-en-empty.png",
+    "width": 645,
+    "height": 3096,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  },
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "en",
+    "state": "error",
+    "path": "docs/design/renders/C-01-en-error.png",
+    "width": 645,
+    "height": 3096,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  },
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "en",
+    "state": "success",
+    "path": "docs/design/renders/C-01-en-success.png",
+    "width": 645,
+    "height": 3096,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  },
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "en",
+    "state": "disabled",
+    "path": "docs/design/renders/C-01-en-disabled.png",
+    "width": 645,
+    "height": 3096,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  },
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "en",
+    "state": "offline",
+    "path": "docs/design/renders/C-01-en-offline.png",
+    "width": 645,
+    "height": 3129,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  },
+  {
+    "screenId": "C-01",
+    "role": "customer",
+    "title": "A little care, every day",
+    "bnTitle": "প্রতিদিন একটু যত্ন",
+    "locale": "bn",
+    "state": "normal",
+    "path": "docs/design/renders/C-01-bn-normal.png",
+    "width": 645,
+    "height": 6186,
+    "later": false,
+    "controls": [
+      {
+        "label": "Choose address",
+        "target": "C-02",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Notifications",
+        "target": "SH-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "My active plan",
+        "target": "C-13",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Pause meals",
+        "target": "C-15",
+        "command": null,
+        "policy": "BR-001"
+      },
+      {
+        "label": "Plan calendar",
+        "target": "C-14",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "View delivery status",
+        "target": "C-18",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Lunch details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Dinner details",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Contact rider",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Message options",
+        "target": "SH-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Modify routine",
+        "target": "C-16",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "See all meals",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "All items",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Bengali thali",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Diet & keto",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "More categories",
+        "target": "C-04",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Chicken thali",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Next meal",
+        "target": "C-06",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Megh Kitchen",
+        "target": "C-07",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Customer reviews",
+        "target": "C-20",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscribe",
+        "target": "C-08",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Home",
+        "target": "C-01",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Subscriptions",
+        "target": "C-12",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Orders",
+        "target": "C-17",
+        "command": null,
+        "policy": null
+      },
+      {
+        "label": "Profile",
+        "target": "C-23",
+        "command": null,
+        "policy": null
+      }
+    ]
+  }
+]

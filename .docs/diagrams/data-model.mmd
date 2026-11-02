@@ -1,0 +1,27 @@
+erDiagram
+  PRINCIPAL ||--|| USER_PROFILE : authorizes
+  USER_PROFILE ||--o{ ADDRESS : owns
+  PRINCIPAL ||--o| SUPPLIER : mayOperate
+  SUPPLIER ||--o{ FOOD : publishes
+  SUPPLIER ||--o{ PLAN : offers
+  SUPPLIER ||--o{ MENU : schedules
+  USER_PROFILE ||--o{ SUBSCRIPTION : requests
+  PLAN ||--o{ SUBSCRIPTION : snapshots
+  SUBSCRIPTION ||--o{ PAUSE_REQUEST : receives
+  SUBSCRIPTION o|--o{ MEAL_ORDER : originates
+  USER_PROFILE ||--o{ MEAL_ORDER : owns
+  SUPPLIER ||--o{ MEAL_ORDER : prepares
+  MEAL_ORDER ||--|| DELIVERY_DETAIL : snapshots
+  MEAL_ORDER ||--o{ ASSIGNMENT : retainsHistory
+  PRINCIPAL ||--o{ ASSIGNMENT : assignedRider
+  MEAL_ORDER ||--o{ ORDER_EVENT : records
+  USER_PROFILE ||--o{ BILL : receives
+  BILL ||--o{ BILL_LINE : contains
+  BILL ||--o{ PAYMENT_REFERENCE : receivesClaim
+  PAYMENT_REFERENCE ||--o{ PAYMENT_ALLOCATION : verifiedAllocation
+  BILL ||--o{ PAYMENT_ALLOCATION : creditedBy
+  MEAL_ORDER ||--o{ REVIEW : eligibilityPending
+  USER_PROFILE ||--o{ COMPLAINT : submits
+  PRINCIPAL ||--o{ AUDIT_EVENT : attributedActor
+  PRINCIPAL ||--o{ REQUEST_RECEIPT : scopesRetry
+  PRINCIPAL ||--o{ NOTIFICATION : receives

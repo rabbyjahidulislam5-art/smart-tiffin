@@ -1,0 +1,16 @@
+flowchart LR
+  Customer[Customer] --> Flutter[Untrusted Flutter client]
+  Supplier[Supplier / Cook] --> Flutter
+  Rider[Delivery Rider] --> Flutter
+  Admin[Admin] --> Flutter
+  Flutter --> Auth[Firebase Authentication]
+  Flutter --> Rules[Firestore Security Rules]
+  Rules --> Data[(Firestore)]
+  Flutter --> Commands[Proposed trusted command service]
+  Commands --> Authorization[Role / ownership / policy validation]
+  Authorization --> Transaction[Transaction + audit + request receipt]
+  Transaction --> Data
+  Transaction --> Outbox[Committed notification intent]
+  Outbox --> Sender[Trusted notification worker]
+  Sender --> FCM[Firebase Cloud Messaging]
+  FCM --> Flutter

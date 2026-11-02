@@ -1,0 +1,12 @@
+stateDiagram-v2
+  [*] --> Pending
+  Pending --> PickedUp: Authorized pickup
+  PickedUp --> OnTheWay: Authorized start
+  OnTheWay --> Delivered: Approved completion evidence
+  Delivered --> [*]
+  state "Picked Up" as PickedUp
+  state "On The Way" as OnTheWay
+  note right of Pending
+    Assignment and exception policies pending BR-004.
+    Preparation, payment and incidents are separate.
+  end note

@@ -1,0 +1,17 @@
+sequenceDiagram
+  actor Customer
+  participant UI as Flutter UI
+  participant Server as Trusted command service
+  participant DB as Firestore
+  participant Worker as Notification worker
+  Customer->>UI: Review approved quote and confirm
+  UI->>Server: Command + request ID + expected version
+  Server->>Server: Authenticate, authorize, validate approved policy
+  Server->>DB: Transaction: availability, quote, order, audit, receipt, outbox
+  DB-->>Server: Atomic commit
+  Server-->>UI: Committed result reference
+  UI-->>Customer: Confirmed order
+  Worker->>DB: Read committed notification intent
+  Worker-->>Customer: Best-effort FCM notification
+  Note over UI,DB: Timeout requires receipt reconciliation before retry
+  Note over Server,Worker: Notification failure does not undo committed order
